@@ -2,9 +2,10 @@
   display: inline-block;
   margin: 0 0.5rem;
 
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s; /* don't forget to set a duration! */
-}/* This only changes this particular animation duration */
+  animation: bounce;
+  animation-duration: 2s; 
+}
+/* This only changes this particular animation duration */
 .animate__animated.animate__bounce {
   --animate-duration: 2s;
 }
@@ -13,4 +14,75 @@
 :root {
   --animate-duration: 800ms;
   --animate-delay: 0.9s;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(90deg, blue, green);
+}
+/* Logo */
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Center Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+/* Right Buttons */
+.buttons button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.signup {
+  background-color: white;
+  color: blue;
+}
+
+.login {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.signup:hover {
+  background-color: yellow;
+  transform: scale(1.05);
+}
+login:hover {
+  background-color: white;
+  color: blue;
+  transform: scale(1.05);
 }
